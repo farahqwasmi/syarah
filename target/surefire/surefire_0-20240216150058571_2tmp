@@ -1,0 +1,6 @@
+#surefire_0
+#Fri Feb 16 15:00:58 EET 2024
+basedir=/Users/farah/Desktop/syarah
+idea.version=2022.2.2
+suiteXmlFile=testng.xml
+localRepository=/Users/farah/.m2/repository
