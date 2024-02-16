@@ -24,36 +24,7 @@ To run the tests, use the following Maven command:
 **Test Reports**
 After running the tests, you can find the HTML test report in the  `spark.html` file.
 
-Project Structure
-
-`|-- src
-|   |-- main
-|   |   |-- java
-|   |   |   |-- helpers
-|   |   |       |--  CommonFunctions
-|   |   |       |-- ConfigReader
-|   |   |       |-- ExtentReportBuilder
-|   |   |       |-- WebDriverHelper
-
-|   |   |
-|   |   |-- resources
-|   |       |-- config.properties
-|   |       |-- features
-|   |           |-- carReservation.feature
-|   |
-|   |-- test
-|       |-- java
-|       |   |-- pageObjects
-|       |        |-- carReservationPage
-
-|       |   |-- stepDef
-|       |        |-- carReservationStepsDef
-|       |   |-- runner.class
-|       |
-|       |-- resources
-|-- target
-|-- pom.xml
-|-- spark.xml
-|-- testng.xml
-|-- README.md`
+**Project Structure**
+  
+![img.png](img.png)
 
