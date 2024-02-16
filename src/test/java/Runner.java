@@ -1,8 +1,9 @@
 
-import helpers.webDriverHelper;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.AfterClass;
+
+import static helpers.webDriverHelper.quitDriver;
 
 @CucumberOptions(
 
@@ -11,8 +12,9 @@ import org.testng.annotations.AfterClass;
 )
 
 public class Runner extends AbstractTestNGCucumberTests {
+
+
     @AfterClass
     public void driverKiller(){
-        webDriverHelper.getWebDriver().quit();
-    }
+        quitDriver();    }
 }
