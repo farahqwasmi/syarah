@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
  * The webDriverHelper class provides methods to manage the WebDriver instance,
  * including starting and quitting the ChromeDriver.
  */
-public class webDriverHelper {
+public class WebDriverHelper {
 
     // Static ChromeDriver instance
     static ChromeDriver driver = null;

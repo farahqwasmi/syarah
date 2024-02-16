@@ -23,7 +23,7 @@ public class CommonFunctions extends ExtentReportBuilder {
      */
     public static WebElement element(By by)
     {
-        return webDriverHelper.getWebDriver().findElement(by);
+        return WebDriverHelper.getWebDriver().findElement(by);
     }
 
     /**
@@ -33,7 +33,7 @@ public class CommonFunctions extends ExtentReportBuilder {
      */
     public static void navigateTo(String url)
     {
-        webDriverHelper.getWebDriver().navigate().to(url);
+        WebDriverHelper.getWebDriver().navigate().to(url);
         logInfo("Navigate to " + url);
     }
 
@@ -68,7 +68,7 @@ public class CommonFunctions extends ExtentReportBuilder {
      */
     public static void forceClick(By by)
     {
-        JavascriptExecutor executor = (JavascriptExecutor) webDriverHelper.getWebDriver();
+        JavascriptExecutor executor = (JavascriptExecutor) WebDriverHelper.getWebDriver();
         executor.executeScript("arguments[0].click();", element(by));
     }
 
@@ -102,15 +102,15 @@ public class CommonFunctions extends ExtentReportBuilder {
         waitStrategy = waitStrategy.toUpperCase();
         switch (waitStrategy) {
             case "CLICKABLE":
-                element = new WebDriverWait(webDriverHelper.getWebDriver(), Duration.ofSeconds(40))
+                element = new WebDriverWait(WebDriverHelper.getWebDriver(), Duration.ofSeconds(40))
                         .until(ExpectedConditions.elementToBeClickable(webElement));
                 break;
             case "PRESENCE":
-                element = new WebDriverWait(webDriverHelper.getWebDriver(), Duration.ofSeconds(40))
+                element = new WebDriverWait(WebDriverHelper.getWebDriver(), Duration.ofSeconds(40))
                         .until(ExpectedConditions.presenceOfElementLocated(webElement));
                 break;
             case "VISIBLE":
-                element = new WebDriverWait(webDriverHelper.getWebDriver(), Duration.ofSeconds(40))
+                element = new WebDriverWait(WebDriverHelper.getWebDriver(), Duration.ofSeconds(40))
                         .until(ExpectedConditions.visibilityOf(element(webElement)));
                 break;
         }
@@ -123,7 +123,7 @@ public class CommonFunctions extends ExtentReportBuilder {
      */
     public static void implicitlyWaitBySeconds(int time)
     {
-        webDriverHelper.getWebDriver().manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
+        WebDriverHelper.getWebDriver().manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
     }
 
     /**
@@ -133,7 +133,7 @@ public class CommonFunctions extends ExtentReportBuilder {
      */
     public static void scrollTo(WebElement element)
     {
-        JavascriptExecutor js = (JavascriptExecutor) webDriverHelper.getWebDriver();
+        JavascriptExecutor js = (JavascriptExecutor) WebDriverHelper.getWebDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 }

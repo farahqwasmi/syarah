@@ -1,7 +1,7 @@
 package pageObjects;
 
 import helpers.CommonFunctions;
-import helpers.webDriverHelper;
+import helpers.WebDriverHelper;
 import org.openqa.selenium.By;
 
 import static org.testng.AssertJUnit.assertEquals;
@@ -65,7 +65,7 @@ public class carReservationPage extends CommonFunctions {
      explicitlyWaitForWebElement("VISIBLE" , carPriceCheckoutPage);
         String [] strCheckoutPriceArr = element(carPriceCheckoutPage).getText().split(" ");
         String strCheckoutPrice;
-        String currentUrl = webDriverHelper.getWebDriver().getCurrentUrl();
+        String currentUrl = WebDriverHelper.getWebDriver().getCurrentUrl();
        if (currentUrl.contains("/en/"))
            strCheckoutPrice = strCheckoutPriceArr[0]+strCheckoutPriceArr[1];
           else

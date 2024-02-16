@@ -1,3 +1,4 @@
-helpers/webDriverHelper.class
-helpers/commonFunctions.class
-helpers/extentReportBuilder.class
+helpers/ExtentReportBuilder.class
+helpers/CommonFunctions.class
+helpers/ConfigReader.class
+helpers/WebDriverHelper.class

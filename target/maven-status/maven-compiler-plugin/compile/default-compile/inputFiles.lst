@@ -1,3 +1,4 @@
-/Users/farah/Desktop/syarah/src/main/java/helpers/extentReportBuilder.java
-/Users/farah/Desktop/syarah/src/main/java/helpers/webDriverHelper.java
-/Users/farah/Desktop/syarah/src/main/java/helpers/commonFunctions.java
+/Users/farah/Desktop/syarah/src/main/java/helpers/CommonFunctions.java
+/Users/farah/Desktop/syarah/src/main/java/helpers/ExtentReportBuilder.java
+/Users/farah/Desktop/syarah/src/main/java/helpers/WebDriverHelper.java
+/Users/farah/Desktop/syarah/src/main/java/helpers/ConfigReader.java

@@ -8,13 +8,14 @@ import io.cucumber.java.en.When;
 import pageObjects.carReservationPage;
 
 import static helpers.CommonFunctions.navigateTo;
+import static helpers.ConfigReader.getString;
 
 public class carReservationStepsDef extends ExtentReportBuilder {
     @Given("toyota car model")
     public void chooseToyota()
     {
         buildTest(" car rent case");
-        navigateTo("http://syarah.com");
+        navigateTo(getString("url"));
         carReservationPage.navigateToToyotaPage();
     }
     @When("car selected")
